@@ -130,6 +130,7 @@ class AccountsTable extends Component {
   }
 
   render() {
+    const data = this.props.accounts.data ? this.props.accounts.data : [];
     const alert = this.getAlertMessage();
     const cellEditProp = {
       blurToSave: true,
@@ -156,10 +157,9 @@ class AccountsTable extends Component {
               {alert}
             </Alert>
           </div>}
-        {(this.props.accounts.isLoading || !this.props.accounts.data) &&
+        {this.props.accounts.isLoading &&
           <div>Loading...</div>}
         {!this.props.accounts.isLoading &&
-          this.props.accounts.data &&
           <div>
             <Well style={{ margin: '0px 10px 20px 10px' }}>
               <h1 style={{ textAlign: 'center' }}>
@@ -167,7 +167,7 @@ class AccountsTable extends Component {
               </h1>
             </Well>
             <BootstrapTable
-              data={this.props.accounts.data}
+              data={data}
               striped
               selectRow={this.selectRowProp}
               deleteRow

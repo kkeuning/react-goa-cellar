@@ -1,5 +1,7 @@
 import * as types from './reduxa/cellar/accountActionTypes';
 
+const CLEAR_ACCOUNTS = 'CLEAR_ACCOUNTS';
+
 const initialState = {
   isLoading: true,
   error: false,
@@ -16,14 +18,8 @@ const accounts = (state = initialState, action = null) => {
         status: action.status,
         error: true
       };
-    case types.CLEAR_ACCOUNTS:
-      return {
-        ...state,
-        isLoading: false,
-        data: false,
-        status: false,
-        error: false
-      };
+    case CLEAR_ACCOUNTS:
+      return initialState;
     case types.RCV_LIST_ACCOUNTS_SUCCESS:
       return {
         ...state,

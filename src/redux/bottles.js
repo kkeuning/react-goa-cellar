@@ -1,5 +1,7 @@
 import * as types from './reduxa/cellar/bottleActionTypes';
 
+const CLEAR_BOTTLES = 'CLEAR_BOTTLES';
+
 const initialState = {
   isLoading: true,
   error: false,
@@ -16,7 +18,7 @@ const bottles = (state = initialState, action = null) => {
         status: action.status,
         error: true
       };
-    case types.CLEAR_BOTTLES:
+    case CLEAR_BOTTLES:
       return initialState;
     case types.RCV_LIST_BOTTLES_SUCCESS:
       return {
