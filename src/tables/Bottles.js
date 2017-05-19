@@ -7,7 +7,6 @@ import { loadBottles } from '../manageBottles';
 
 const selectRowProp = {
   mode: 'radio',
-  clickToSelect: true
 };
 
 const colorOptions = ['red', 'white', 'rose', 'yellow', 'sparkling'];
@@ -211,7 +210,7 @@ class BottlesTable extends Component {
               }}
               cellEdit={{
                 blurToSave: true,
-                mode: 'dbclick',
+                mode: 'click',
                 afterSaveCell: this.onAfterSaveCell.bind(this) // a hook for after saving cell
               }}
             >

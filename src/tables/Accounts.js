@@ -134,7 +134,7 @@ class AccountsTable extends Component {
     const alert = this.getAlertMessage();
     const cellEditProp = {
       blurToSave: true,
-      mode: 'dbclick',
+      mode: 'click',
       beforeSaveCell: this.onBeforeSaveCell, // a hook for before saving cell
       afterSaveCell: this.onAfterSaveCell // a hook for after saving cell
     };
