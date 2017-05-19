@@ -126,7 +126,7 @@ class AccountsTable extends Component {
   };
 
   handleAlertDismiss() {
-    this.setState({ alertMessage: null, alertVisible: false });
+    this.setState({ alertMessage: [], alertVisible: false });
   }
 
   render() {
