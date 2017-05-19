@@ -1,4 +1,5 @@
-import React, { PropTypes, Component } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { BootstrapTable, TableHeaderColumn } from 'react-bootstrap-table';
 import { Alert, Well } from 'react-bootstrap';
 import { insertAccount, editAccount, removeAccount } from '../manageAccounts';
