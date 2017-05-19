@@ -1,6 +1,8 @@
 # react-goa-cellar
 
-react-goa-cellar was created as a demo app for kkeuning/reduxa.  This is also a good example of how to use goa, gorma, redux, reduxa, create-react-app, react-bootstrap-table, react-bootstrap, and redux together to rapidly develop a full stack application.
+react-goa-cellar was created as a demo app for [reduxa](https://github.com/kkeuning/reduxa), a [goa](https://goa.design) plug-in to generate [redux](https://github.com/reactjs/redux) boilerplate.
+
+This can also be a good example of how to use goa, gorma, redux, reduxa, create-react-app, react-bootstrap-table, react-bootstrap, and redux together to rapidly develop a full stack application with CRUD functionality.
 
 Status: Under construction.  
 
@@ -8,6 +10,17 @@ Most functionality is in place, however some deployment improvements are needed.
 - Configuring proxy to avoid CORS issues in development.  For now you must change the default goa-cellar CORS configuration to use this app.
 - Add Docker files and docker-compose.yml for full stack example with gorma-cellar, postgres, and Caddy.
 - Improve documentation including this README
+
+# Installation
+
+```
+git clone https://github.com/kkeuning/react-goa-cellar
+cd react-goa-cellar
+npm i
+npm start
+```
+
+This app expects to be able to connect to a functioning gorma-cellar or goa-cellar server with CORS enabled.  For example, you can use the `chicago` branch in my fork of [gorma-cellar](https://github.com/kkeuning/gorma-cellar).  The updated design package is located in the `cors` branch of my fork of [goa-cellar](https://github.com/kkeuning/goa-cellar).  You can change the host and port of your api server in `src/config.js` and may want to add logic for `__DEVELOPMENT__` vs. `__PRODUCTION__` there or alternatively reconfigure that to take advantage of a proxy and avoid CORS. 
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
